@@ -1,0 +1,14 @@
+{
+  "name": "fluency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Fluency.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animejs": "^3.2.1"
+  }
+}

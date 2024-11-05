@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Fluency",
+  "version": "1.0",
+
+  "description": "Jacob's HelloWorld Extension.",
+
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["Fluency.js", "node_modules/animejs/lib/anime.min.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["/background/callgpt.js"],
+    "type": "module"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["/index.html", "/index.css", "/assets/*"],
+      "matches": ["*://*/*"]
+    }
+  ],
+
+  "permissions": ["clipboardWrite", "clipboardRead"]
+}

@@ -1,0 +1,241 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url("assets/OpenSans-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("assets/OpenSans-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("assets/OpenSans-Medium.ttf");
+  font-weight: 500;
+}
+
+.fluency-container,
+.fluency-container * {
+  all: revert;
+  font-family: "Open Sans" !important
+}
+
+.fluency-container {
+  z-index: 999;
+
+  width: 400px;
+  height: 400px;
+
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #f9faff;
+
+  box-shadow: 
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0.1) 0px 0px 5px 0px;
+
+}
+
+
+.fluency-container .fluencyTopBar {
+  background-color: #1f2d36;
+  color: white;
+  display: flex;
+  padding: 10px;
+
+}
+
+
+
+
+#fluencyInputContainer {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+}
+
+
+
+#fluencyInput {
+  background-color: white;
+  flex-grow: 1;
+  position: relative;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+  resize: none;
+
+  font-size: 14px;
+  padding: 10px;
+  border: 0;
+  font-family: "Open Sans";
+}
+
+#fluencyInput:focus {
+  outline: 2px solid #1f2d3660 !important;
+  outline-offset: -2px !important;
+}
+
+#fluencyPasteButton {
+  position: absolute;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background-color: white;
+
+}
+
+#fluencyPasteButton:hover {
+  background-color: rgba(60,64,67,.04);
+}
+
+#fluencyPasteButton:active {
+  background-color: rgba(60,64,67,.12);
+}
+
+#fluencyCopyButton {
+  position: absolute;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background-color: white;
+
+}
+
+#fluencyCopyButton:hover {
+  background-color: rgba(60,64,67,.04);
+}
+
+#fluencyCopyButton:active {
+  background-color: rgba(60,64,67,.12);
+}
+
+
+.fluencyPastePath {
+  fill: #5f6368 !important;
+}
+
+#fluencyOutputContainer {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+#fluencyOutput {
+  background-color: white;
+  flex-grow: 1;
+  position: relative;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+  resize: none;
+
+  font-size: 14px;
+
+  padding: 10px;
+  border: 0;
+  font-family: "Open Sans";
+}
+
+
+#fluencyTitle {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+
+#fluencyTag {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(217,217,227,1);
+  font-size: 32px;
+  letter-spacing: -1.5px;
+  font-weight: bold;
+}
+
+#fluencyLoadingContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+  z-index: 999;
+  background-color: white;
+
+}
+
+.fluencyBallContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+}
+
+.fluencyLoadingBall {
+  width: 15px;
+  height: 15px;
+  border-radius: 11px;
+  margin: 0 5px;
+  background-color: #1f2d36;
+  
+  animation: 2s bounce ease infinite;
+}
+
+.fluencyFirstBall {
+  animation-delay: 0s;
+}
+
+.fluencySecondBall {
+  animation-delay: 0.25s;
+}
+
+.fluencyThirdBall {
+  animation-delay: 0.5s;
+}
+
+.fluencyFourthBall {
+  animation-delay: 0.75s;
+}
+
+
+@keyframes bounce {  
+  50% {
+      transform: translateY(25px);
+  }
+}
+
+#fluencyFunLoadingText {
+  margin-top: 40px;
+}
